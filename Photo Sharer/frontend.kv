@@ -1,0 +1,83 @@
+<CameraScreen>
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+
+        Camera:
+            id: camera
+            resolution: (640, 400)
+            play: False
+            size_hint_y: 0.7
+        Button:
+            text: "Start Camera" if root.ids.camera.play == False else "Stop Camera"
+            color: (0, 0, 0, 1)
+            font_size: 20
+            font_name: "Arial.ttf"
+            on_press: root.start() if root.ids.camera.play == False else root.stop()
+            size_hint_y: 0.15
+            background_color: (0.2, 0.5, 0.5, 1.0)
+        Button:
+            text: "Capture"
+            color: (0, 0, 0, 1)
+            font_size: 20
+            font_name: "Arial"
+            on_press: root.capture()
+            size_hint_y: 0.15
+            background_color: (0.2, 0.5, 0.5, 1.0)
+
+
+<ImageScreen>
+    GridLayout:
+        padding: 10
+        spacing: 10
+        cols:1
+        Image:
+            id:img
+            size_hint_y: 0.7
+        Button:
+            text: 'Create Shareable link'
+            color: (0, 0, 0, 1)
+            font_size: 20
+            font_name: "Arial"
+            on_press: root.create_link()
+            size_hint_y: 0.15
+            background_color: (0.2, 0.5, 0.5, 1.0)
+        Label:
+            id: link
+            text: ''
+            size_hint_y: 0.1
+
+        GridLayout:
+            padding: 10
+            spacing: 10
+            size_hint_y: 0.15
+            cols: 2
+            Button:
+                text: 'Copy Link'
+                color: (0, 0, 0, 1)
+                font_size: 20
+                font_name: "Arial"
+                on_press: root.copy_link()
+                background_color: (0.2, 0.5, 0.5, 1.0)
+            Button:
+                text: 'Open Link'
+                color: (0, 0, 0, 1)
+                font_size: 20
+                font_name: "Arial"
+                on_press: root.open_link()
+                background_color: (0.2, 0.5, 0.5, 1.0)
+
+<RootWidget>
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.8, 1, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    CameraScreen:
+        id: camera_screen
+        name: "camera_screen"
+    ImageScreen:
+        id: image_screen
+        name: "image_screen"
