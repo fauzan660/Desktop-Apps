@@ -1,0 +1,259 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Pdfreport",
+        "importPath": "pdf_report",
+        "description": "pdf_report",
+        "isExtraImport": true,
+        "detail": "pdf_report",
+        "documentation": {}
+    },
+    {
+        "label": "Flatmate",
+        "importPath": "flatmate_and_bill",
+        "description": "flatmate_and_bill",
+        "isExtraImport": true,
+        "detail": "flatmate_and_bill",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "importPath": "flatmate_and_bill",
+        "description": "flatmate_and_bill",
+        "isExtraImport": true,
+        "detail": "flatmate_and_bill",
+        "documentation": {}
+    },
+    {
+        "label": "webbrowser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "webbrowser",
+        "description": "webbrowser",
+        "detail": "webbrowser",
+        "documentation": {}
+    },
+    {
+        "label": "FPDF",
+        "importPath": "fpdf",
+        "description": "fpdf",
+        "isExtraImport": true,
+        "detail": "fpdf",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Bill",
+        "kind": 6,
+        "importPath": "flatmate_and_bill",
+        "description": "flatmate_and_bill",
+        "peekOfCode": "class Bill:\n    def __init__(self, amount, period):\n        self.amount = amount\n        self.period = period\nclass Flatmate:\n    def __init__(self, name, days_in_house):\n        self.name = name\n        self.days_in_house = days_in_house\n    def pays(self, bill, days_flatmate2):\n        days = self.days_in_house / (self.days_in_house + days_flatmate2)",
+        "detail": "flatmate_and_bill",
+        "documentation": {}
+    },
+    {
+        "label": "Flatmate",
+        "kind": 6,
+        "importPath": "flatmate_and_bill",
+        "description": "flatmate_and_bill",
+        "peekOfCode": "class Flatmate:\n    def __init__(self, name, days_in_house):\n        self.name = name\n        self.days_in_house = days_in_house\n    def pays(self, bill, days_flatmate2):\n        days = self.days_in_house / (self.days_in_house + days_flatmate2)\n        total = days * bill.amount\n        return total",
+        "detail": "flatmate_and_bill",
+        "documentation": {}
+    },
+    {
+        "label": "mate1",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "mate1 = input(\"What is the name of flatmate 1: \").capitalize()\nmate2 = input(\"What is the name of flatmate 2: \").capitalize()\nmonth = input(\"Which month's bill is this: \").capitalize()\ntbill = int(input(\"What is the total bill this month: \"))\nm1_days = int(input(f\"How many days did {mate1.capitalize()} live in the house \"))\nm2_days = int(input(f\"How many days did {mate2.capitalize()} live in the house \"))\nthe_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "mate2",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "mate2 = input(\"What is the name of flatmate 2: \").capitalize()\nmonth = input(\"Which month's bill is this: \").capitalize()\ntbill = int(input(\"What is the total bill this month: \"))\nm1_days = int(input(f\"How many days did {mate1.capitalize()} live in the house \"))\nm2_days = int(input(f\"How many days did {mate2.capitalize()} live in the house \"))\nthe_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "month",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "month = input(\"Which month's bill is this: \").capitalize()\ntbill = int(input(\"What is the total bill this month: \"))\nm1_days = int(input(f\"How many days did {mate1.capitalize()} live in the house \"))\nm2_days = int(input(f\"How many days did {mate2.capitalize()} live in the house \"))\nthe_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "tbill",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "tbill = int(input(\"What is the total bill this month: \"))\nm1_days = int(input(f\"How many days did {mate1.capitalize()} live in the house \"))\nm2_days = int(input(f\"How many days did {mate2.capitalize()} live in the house \"))\nthe_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "m1_days",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "m1_days = int(input(f\"How many days did {mate1.capitalize()} live in the house \"))\nm2_days = int(input(f\"How many days did {mate2.capitalize()} live in the house \"))\nthe_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "m2_days",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "m2_days = int(input(f\"How many days did {mate2.capitalize()} live in the house \"))\nthe_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "the_bill",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "the_bill = Bill(tbill, month)\nm1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "m1",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "m1 = Flatmate(mate1, m1_days)\nm2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "m2",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "m2 = Flatmate(mate2, m2_days)\nfile1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "file1",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "file1 = Pdfreport(filename= \"test_report_1.pdf\")\nfile1.generate(flatmate1= m1, flatmate2= m2, bill= the_bill)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Pdfreport",
+        "kind": 6,
+        "importPath": "pdf_report",
+        "description": "pdf_report",
+        "peekOfCode": "class Pdfreport:\n    def __init__(self, filename):\n        self.filename = filename\n    def generate(self, flatmate1, flatmate2, bill):\n        pdf = FPDF(orientation=\"P\", unit=\"pt\", format=\"A4\")\n        pdf.add_page()\n        pdf.image(\"housing.jpg\", x=0, y=0, w=600, h=900)\n        pdf.set_font(family=\"Times\", size=38, style=\"B\")\n        pdf.cell( w=0, h=80, txt=\"Flatmates Bill\", align=\"C\", border=0, ln=1)\n        pdf.set_font(family=\"Times\", size=25, style=\"B\")",
+        "detail": "pdf_report",
+        "documentation": {}
+    }
+]
